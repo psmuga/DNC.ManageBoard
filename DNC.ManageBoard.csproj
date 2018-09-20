@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-DNC.ManageBoard-20B6CE6D-2F94-4053-A7C1-255ED7031946</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--Enable to watch .cshtml files-->
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <Watch Include="**\*.cshtml"></Watch>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="2.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" PrivateAssets="All" />
+
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.1" />
+    <PackageReference Include="NLog" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="wwwroot\lib\qrcode\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Identity\Pages\Account\AccessDenied.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ExternalLogin.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ForgotPassword.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Lockout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Login.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\LoginWith2fa.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Logout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Register.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+    <None Include="Areas\Identity\Pages\Error.cshtml" />
+    <None Include="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\Identity\Pages\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\Piotr Smuga\.nuget\packages\nlog.config\4.5.10\contentFiles\any\any\NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

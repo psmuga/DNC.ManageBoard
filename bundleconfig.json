@@ -1,0 +1,18 @@
+// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+
+  {
+    "outputFileName": "wwwroot/lib/qrcode/qrcode.min.js",
+    "inputFiles": [
+      "node_modules/qrcodejs/qrcode.min.js"
+    ],
+    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  }
+]
