@@ -22,21 +22,21 @@ namespace DNC.ManageBoard.Controllers
         }
         public IActionResult Index()
         {
-            _logger.LogCritical("Hello from Home Controller");
+            //_logger.LogCritical("Hello from Home Controller");
   
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public IActionResult About()
         {
-            _logger.LogInformation("Hello from about ");
+            //_logger.LogInformation("Hello from about ");
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";

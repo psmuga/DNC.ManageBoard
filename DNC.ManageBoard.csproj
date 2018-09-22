@@ -56,6 +56,11 @@
     <None Include="Areas\Identity\Pages\Error.cshtml" />
     <None Include="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
     <None Include="Areas\Identity\Pages\_ViewImports.cshtml" />
+    <None Include="Views\ToDo\Create.cshtml" />
+    <None Include="Views\ToDo\Delete.cshtml" />
+    <None Include="Views\ToDo\Details.cshtml" />
+    <None Include="Views\ToDo\Edit.cshtml" />
+    <None Include="Views\ToDo\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
