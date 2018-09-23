@@ -16,7 +16,7 @@ namespace DNC.ManageBoard.Models
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }
 
-        public DateTime DateTime { get; set; } = DateTime.UtcNow;
+        public DateTime Published { get; set; } = DateTime.UtcNow;
 
         public bool IsFinished { get; set; } = false;
     }

@@ -17,10 +17,7 @@
                 @Html.DisplayNameFor(model => model.Topic)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Content)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateTime)
+                @Html.DisplayNameFor(model => model.Published)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsFinished)
@@ -35,10 +32,8 @@
                 @Html.DisplayFor(modelItem => item.Topic)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTime)
+                @String.Format("{0:d}",item.Published)
+                @*@Html.DisplayFor(modelItem => item.Published.ToString("d"))*@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsFinished)

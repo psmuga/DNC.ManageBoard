@@ -72,11 +72,13 @@ namespace DNC.ManageBoard
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
+
+            
         }
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger<Startup> logger, ApplicationDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -90,12 +92,15 @@ namespace DNC.ManageBoard
             }
             NLog.LogManager.LoadConfiguration("NLog.config");
 
+
             var gen = new GeneralSettings();
-            Configuration.GetSection("General").Bind(gen);  
+            Configuration.GetSection("General").Bind(gen);
             if (gen.SeedData)
             {
-                logger.LogInformation("SeedData: " + gen.SeedData);
+                //var context = services.GetRequiredService<ApplicationDbContext>();
+                DbInitializer.Initialize(context, logger);
             }
+
 
 
             app.UseHttpsRedirection();
